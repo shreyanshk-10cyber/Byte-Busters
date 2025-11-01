@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sill Buddy - Student Skill Sharing Platform</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #0d1117;
+      color: #f5f5f5;
+    }
+
+    header {
+      background-color: #1f6feb;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+     .logo {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    nav {
+      background: #161b22;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 0.8rem 0;
+      border-bottom: 2px solid #1f6feb;
+    }
+
+    .nav-links {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+    }
+   
+    .profile-btn {
+  background-color: #1f6feb;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+    }
+
+    .profile-btn:hover {
+  background-color: #58a6ff;
+    }
+
+    nav a {
+      color: #f5f5f5;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #58a6ff;
+    }
+    
+    /* === SEARCH BAR STYLING === */
+    .search-container {
+  display: flex;
+  align-items: center;
+  background-color: #161b22;
+  border-radius: 8px;
+  padding: 5px 10px;
+  border: 1px solid #30363d;
+    }
+
+    .search-container input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 8px;
+  width: 220px;
+  font-size: 1rem;
+    }
+
+    .search-container button {
+  background-color: #1f6feb;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+    }
+
+    .search-container button:hover {
+  background-color: #58a6ff;
+    }
+
+
+    .results {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+    }
+
+    .result-card {
+  background: #161b22;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  width: 60%;
+  text-align: left;
+  border-left: 4px solid #1f6feb;
+    }
+
+    .result-card h3 {
+  color: #58a6ff;
+  margin: 0;
+    }
+
+    .result-card p {
+  color: #c9d1d9;
+  margin: 5px 0 0 0;
+    }
+
+    .view-btn {
+  margin-top: 10px;
+  background-color: #1f6feb;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+    }
+
+    .view-btn:hover {
+  background-color: #58a6ff;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: #161b22;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    }
+
+    h2 {
+      color: #58a6ff;
+      border-left: 5px solid #58a6ff;
+      padding-left: 10px;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 2rem;
+    }
+
+    .section {
+      margin-top: 1.5rem;
+      background: #0d1117;
+      padding: 1.2rem;
+      border-radius: 10px;
+      border-left: 4px solid #58a6ff;
+    }
+
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      background-color: #1f6feb;
+      color: white;
+    }
+
+
+    .btn {
+      display: inline-block;
+      background: #58a6ff;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #1f6feb;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search skill or user...">
+    <button onclick="search()">Search</button>
+  </div>
+    <img src="skill.jpg" alt="skill Logo" width="120" height="80" style="vertical-align: middle; margin-right: 10px;">
+    <h1>🧠 Skill Buddy - Learn, Teach & Collaborate</h1>
+    <p>A platform for students to share skills and grow together.</p>
+  </header>
+
+ <nav>
+  <div class="left-nav">
+    <a href="index.html" class="logo">Skill Buddy</a>
+  </div>
+
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="join.html">Join Now</a>
+    <a href="post-skill.html">Post Skill</a>
+    <a href="view skills.html">View Skills</a>
+    <a href="leaderboard.html">Leaderboard</a>
+    <a href="contact.html">Contact</a>
+    <a href="profile.html" class="profile-btn">Profile</a>
+  </div>
+</nav>
+
+
+  <div class="container">
+    <h2>💡 About the Idea</h2>
+    <p><strong>Skill Buddy</strong> is a web platform designed for students to connect, share skills, and learn from each other.  
+      Many college students want to learn new technical or creative skills — like programming, circuit design, UI/UX, or communication —  
+      but they often don't know where to start. EngiConnect solves this by connecting learners with peers who can teach those skills easily and practically.</p>
+
+    <ul>
+      <li>Create your profile and list your skills.</li>
+      <li>Find other students who can teach what you want to learn.</li>
+      <li>Collaborate through chat and small projects.</li>
+    </ul>
+
+    <div class="section">
+      <h2>🧩 Tech Stack</h2>
+      <ul>
+        <li><strong>Frontend:</strong> HTML, CSS, JavaScript (simple and lightweight)</li>
+        <li><strong>Backend:</strong> Firebase (for login, database, and storage)</li>
+        <li><strong>Tools Used:</strong> VS Code, GitHub, Figma (for prototype design)</li>
+        <li><strong>Deployment:</strong> Firebase Hosting / Netlify</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>🎯 Impact</h2>
+      <p>Skill Buddy helps students, especially first-years, explore real-world skills and teamwork.  
+        By learning and teaching one another, they grow faster and become more confident.  
+        It encourages practical learning and builds a collaborative engineering community where everyone helps each other succeed.</p>
+    </div>
+
+
+    <div style="text-align:center; margin-top: 2rem;">
+      <a href="join.html" class="btn">Join Now</a>
+      <a href="post-skill.html" class="btn" style="margin-left:10px;">Post Your Skill</a>
+    </div>
+  </div>
+    <div id="results" class="results"></div>
+
+    <!-- 🔹 TEMP TEST FORM (you can remove later) -->
+<!--form id="joinForm" style="margin: 20px;">
+  <input type="text" id="name" placeholder="Enter Name" required>
+  <input type="email" id="email" placeholder="Enter Email" required>
+  <input type="text" id="skill" placeholder="Enter Skill" required>
+  <button type="submit">Join Now</button>
+</form-->
+
+  <footer>
+    <p>© 2025 Skill Buddy | Created by Budding Engineers</p>
+  </footer>
+  <script>
+  const users = [
+    { name: "Riya Sharma", skill: "Web Development", points: 120 },
+    { name: "Aman Patel", skill: "Python", points: 90 },
+    { name: "Neha Gupta", skill: "UI Design", points: 110 },
+    { name: "Rohit Verma", skill: "Data Science", points: 140 },
+    { name: "Priya Nair", skill: "Android Development", points: 80 }
+  ];
+
+  function search() {
+    const query = document.getElementById("searchInput").value.toLowerCase();
+    const resultContainer = document.getElementById("results");
+
+    if (!resultContainer) {
+      console.error("⚠️ No <div id='results'> found to display search results!");
+      return;
+    }
+
+    resultContainer.innerHTML = ""; // Clear previous results
+
+    const filtered = users.filter(
+      user =>
+        user.name.toLowerCase().includes(query) ||
+        user.skill.toLowerCase().includes(query)
+    );
+
+    if (filtered.length === 0) {
+      resultContainer.innerHTML = "<p>No results found.</p>";
+    } else {
+      filtered.forEach(user => {
+        const card = document.createElement("div");
+        card.classList.add("result-card");
+        card.innerHTML = `
+          <h3>${user.name}</h3>
+          <p><strong>Skill:</strong> ${user.skill}</p>
+          <p><strong>Points:</strong> ${user.points}</p>
+          <button class="view-btn" onclick="viewProfile('${user.name}')">View Profile</button>
+        `;
+        resultContainer.appendChild(card);
+      });
+    }
+  }
+
+  function viewProfile(name) {
+    const encodedName = encodeURIComponent(name);
+    window.location.href = `profile.html?name=${encodedName}`;
+  }
+</script>
+  <!--script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-analytics.js";
+  const Analytics = getAnalytics(app);
+  // Import Firestore
+import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-firestore.js";
+
+// Initialize Firestore
+const db = getFirestore(app);
+
+// Example: Function to save user data (you can later call this from your form)
+async function saveUserData(name, email, skill) {
+  try {
+    await addDoc(collection(db, "users"), {
+      name: name,
+      email: email,
+      skill: skill,
+      timestamp: new Date()
+    });
+    alert("✅ Data saved successfully!");
+  } catch (error) {
+    console.error("Error saving data:", error);
+    alert("❌ Failed to save data. Check console.");
+  }
+}
+const joinForm = document.getElementById("joinForm");
+
+if (joinForm) {
+  joinForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const skill = document.getElementById("skill").value;
+    await saveUserData(name, email, skill);
+    joinForm.reset();
+  });
+}
+
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCbCt2dIpuP2As9isu7qWIG8wzYlNZlcoI",
+    authDomain: "skill-buddy-2149b.firebaseapp.com",
+    projectId: "skill-buddy-2149b",
+    storageBucket: "skill-buddy-2149b.firebasestorage.app",
+    messagingSenderId: "808347628162",
+    appId: "1:808347628162:web:cc168fe24556806eeeba9b",
+    measurementId: "G-VWFR767Q87"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script-->
+</body>
+</html>
+

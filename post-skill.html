@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post Your Skill - Skill Buddy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #0d1117;
+      color: #f5f5f5;
+    }
+
+    header {
+      background-color: #1f6feb;
+      text-align: center;
+      padding: 1rem;
+      color: white;
+    }
+
+    nav {
+      background: #161b22;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 0.8rem 0;
+      border-bottom: 2px solid #1f6feb;
+    }
+
+    nav a {
+      color: #f5f5f5;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #58a6ff;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 2rem auto;
+      background: #161b22;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      background: #0d1117;
+      color: white;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #58a6ff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #1f6feb;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Post Your Skill</h1>
+    <p>Share what you know and help others learn!</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="join.html">Join Now</a>
+    <a href="post-skill.html">Post Your Skill</a>
+  </nav>
+
+  <div class="container">
+    <form>
+      <label>Your Name</label>
+      <input type="text" placeholder="Enter your name" required>
+
+      <label>Skill Title</label>
+      <input type="text" placeholder="e.g. Web Development, Python Programming" required>
+
+      <label>Short Description</label>
+      <textarea rows="4" placeholder="Write a short description about your skill..."></textarea>
+
+      <label>Contact Info</label>
+      <input type="email" placeholder="Enter your email or contact" required>
+
+      <button type="submit">Post Skill</button>
+    </form>
+  </div>
+</body>
+</html>
