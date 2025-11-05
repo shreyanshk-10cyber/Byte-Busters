@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "BYTE-BUSTERS",
+    "public": "./",
     "ignore": [
       "firebase.json",
       "**/.*",
