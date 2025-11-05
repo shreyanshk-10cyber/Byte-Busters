@@ -381,6 +381,29 @@ if (joinForm) {
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
 </script-->
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCIu2iRQwT5LwHIGQ4g4GhBRaPFlcJoBNs",
+    authDomain: "skill-buddy-47782.firebaseapp.com",
+    projectId: "skill-buddy-47782",
+    storageBucket: "skill-buddy-47782.firebasestorage.app",
+    messagingSenderId: "803243996057",
+    appId: "1:803243996057:web:8c0be511dbee1209c11908",
+    measurementId: "G-JNJH4HCP5N"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
 </body>
 </html>
 
